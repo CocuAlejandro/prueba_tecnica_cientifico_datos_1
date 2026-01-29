@@ -1,0 +1,40 @@
+# ============================================================================
+# REQUIREMENTS - Análisis Completo Profesional de Costos de Equipamiento
+# ============================================================================
+# Python 3.8+
+
+# Análisis de datos
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Visualización
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# Series temporales y modelado (NUEVO - OBLIGATORIO)
+statsmodels>=0.14.0
+scikit-learn>=1.3.0
+
+# Fechas y tiempo
+python-dateutil>=2.8.0
+
+# Jupyter (para ejecutar el notebook)
+jupyter>=1.0.0
+notebook>=6.5.0
+
+# Utilidades
+openpyxl>=3.1.0  # Para exportar a Excel si es necesario
+
+# ============================================================================
+# INSTALACIÓN
+# ============================================================================
+# Opción 1 - Instalar todo desde requirements:
+# pip install -r requirements_completo.txt
+#
+# Opción 2 - Instalar paquetes individualmente:
+# pip install pandas numpy matplotlib seaborn statsmodels scikit-learn jupyter
+#
+# Opción 3 - Si ya tienes algunos paquetes instalados, instala solo los nuevos:
+# pip install statsmodels scikit-learn
+# ============================================================================
+
