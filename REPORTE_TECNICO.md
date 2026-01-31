@@ -31,9 +31,6 @@ Se requiere estimar los costos de dos tipos de equipamiento esencial para un pro
 - Se han identificado patrones estacionales y tendencias en los precios de las materias primas
 - Los pronósticos permiten una planificación presupuestaria con un nivel de confianza del 85-90%
 
-### Recomendación Principal
-Basándose en el análisis cuantitativo de los datos históricos y los pronósticos generados, se recomienda **EQUIPAMIENTO 1, ya que el Equipamiento 2 es $12982.31 MÁS COSTOSO (122.36%)**, considerando tanto el factor económico como la estabilidad de precios proyectada.
-
 ---
 
 ## 2. EXPLICACIÓN DEL CASO
@@ -52,14 +49,6 @@ Determinar cuál equipamiento proporciona el mejor costo-beneficio para un proye
 - **Composición:** 33.33% Materia Prima X + 33.33% Materia Prima Y + 33.33% Materia Prima Z
 - **Características:** Diversificación equitativa entre las tres materias primas
 - **Fórmula de costo:** `C₂ = (Pₓ + Pᵧ + Pz) / 3`
-
-### 2.3 Datos Disponibles
-
-| Materia Prima | Registros | Rango Temporal | Formato Datos |
-|---------------|-----------|----------------|---------------|
-| **X** | ~9,100 | Hasta 2024-04 | Date,Price (CSV estándar) |
-| **Y** | ~4,487 | Hasta 2023-09 | Date;Price (separador ;, decimal ,) |
-| **Z** | 3,567 | 2010-2021 | Price,Date (orden invertido) |
 
 ---
 
@@ -110,7 +99,7 @@ Determinar cuál equipamiento proporciona el mejor costo-beneficio para un proye
 **Objetivo:** Comprender las características, tendencias y estacionalidad de cada serie temporal.
 
 **Análisis Realizados:**
-- Estadísticas descriptivas (media, desviación estándar, percentiles)
+- Estadísticas descriptivas (media, desviación estándar)
 - Detección de valores atípicos
 - Análisis de tendencia temporal
 - Identificación de patrones estacionales
@@ -118,7 +107,6 @@ Determinar cuál equipamiento proporciona el mejor costo-beneficio para un proye
 
 **Visualizaciones:**
 - Series temporales completas
-- Descomposición estacional
 - Matrices de correlación
 - Distribuciones de precios
 
@@ -175,7 +163,7 @@ Costo_Equipamiento_2 = (Precio_X + Precio_Y + Precio_Z) / 3
 | **Visualización** | Matplotlib, Seaborn |
 | **Modelado** | Statsmodels (ARIMA, Exponential Smoothing) |
 | **Entorno** | Jupyter Notebook |
-| **Control de Versiones** | Git (opcional) |
+| **Control de Versiones** | Git |
 
 ### 4.4 Justificación del Enfoque Elegido
 
@@ -194,123 +182,8 @@ Costo_Equipamiento_2 = (Precio_X + Precio_Y + Precio_Z) / 3
 
 ---
 
-## 5. RESULTADOS DEL ANÁLISIS
 
-### 5.1 Hallazgos del EDA
-
-#### Materia Prima X
-- **Rango de Precios:** $XX.XX - $XX.XX
-- **Precio Promedio Histórico:** $XX.XX
-- **Volatilidad (σ):** $X.XX
-- **Tendencia:** [Alcista/Bajista/Estable]
-- **Estacionalidad:** [Detectada/No detectada]
-
-#### Materia Prima Y
-- **Rango de Precios:** $XXX.XX - $XXX.XX
-- **Precio Promedio Histórico:** $XXX.XX
-- **Volatilidad (σ):** $XX.XX
-- **Tendencia:** [Alcista/Bajista/Estable]
-- **Estacionalidad:** [Detectada/No detectada]
-
-#### Materia Prima Z
-- **Rango de Precios:** $XXXX.XX - $XXXX.XX
-- **Precio Promedio Histórico:** $XXXX.XX
-- **Volatilidad (σ):** $XXX.XX
-- **Tendencia:** [Alcista/Bajista/Estable]
-- **Estacionalidad:** [Detectada/No detectada]
-
-#### Correlaciones
-```
-         X      Y      Z
-X     1.00   0.XX   0.XX
-Y     0.XX   1.00   0.XX
-Z     0.XX   0.XX   1.00
-```
-
-**Interpretación:** [Análisis de correlaciones - a completar tras ejecución]
-
-### 5.2 Desempeño de Modelos
-
-#### Materia Prima X
-| Modelo | MAE | RMSE | MAPE (%) |
-|--------|-----|------|----------|
-| ARIMA | $X.XX | $X.XX | X.XX% |
-| Exp. Smoothing | $X.XX | $X.XX | X.XX% |
-| Moving Average | $X.XX | $X.XX | X.XX% |
-
-**Modelo Seleccionado:** [Nombre del modelo con mejor MAPE]
-
-#### Materia Prima Y
-| Modelo | MAE | RMSE | MAPE (%) |
-|--------|-----|------|----------|
-| ARIMA | $X.XX | $X.XX | X.XX% |
-| Exp. Smoothing | $X.XX | $X.XX | X.XX% |
-| Moving Average | $X.XX | $X.XX | X.XX% |
-
-**Modelo Seleccionado:** [Nombre del modelo con mejor MAPE]
-
-#### Materia Prima Z
-| Modelo | MAE | RMSE | MAPE (%) |
-|--------|-----|------|----------|
-| ARIMA | $X.XX | $X.XX | X.XX% |
-| Exp. Smoothing | $X.XX | $X.XX | X.XX% |
-| Moving Average | $X.XX | $X.XX | X.XX% |
-
-**Modelo Seleccionado:** [Nombre del modelo con mejor MAPE]
-
-### 5.3 Pronósticos de Precios (36 Meses)
-
-#### Precios Proyectados Promedio
-- **Materia Prima X:** $XX.XX (±$X.XX)
-- **Materia Prima Y:** $XXX.XX (±$XX.XX)
-- **Materia Prima Z:** $XXXX.XX (±$XXX.XX)
-
-### 5.4 Estimación de Costos de Equipamientos
-
-#### Equipamiento 1 (20% X + 80% Y)
-
-| Métrica | Valor |
-|---------|-------|
-| **Costo Mensual Promedio** | $XXX.XX |
-| **Costo Total 36 Meses** | $XX,XXX.XX |
-| **Costo Mínimo Mensual** | $XXX.XX (Mes X) |
-| **Costo Máximo Mensual** | $XXX.XX (Mes Y) |
-| **Desviación Estándar** | $XX.XX |
-| **Coeficiente de Variación** | XX.X% |
-
-#### Equipamiento 2 (33.33% X + 33.33% Y + 33.33% Z)
-
-| Métrica | Valor |
-|---------|-------|
-| **Costo Mensual Promedio** | $XXX.XX |
-| **Costo Total 36 Meses** | $XX,XXX.XX |
-| **Costo Mínimo Mensual** | $XXX.XX (Mes X) |
-| **Costo Máximo Mensual** | $XXX.XX (Mes Y) |
-| **Desviación Estándar** | $XX.XX |
-| **Coeficiente de Variación** | XX.X% |
-
-### 5.5 Comparación de Equipamientos
-
-**Diferencia de Costo Total:** $X,XXX.XX  
-**Diferencia Porcentual:** XX.X%  
-**Equipamiento Más Económico:** [Equipamiento 1 / Equipamiento 2]  
-**Equipamiento Más Estable (menor σ):** [Equipamiento 1 / Equipamiento 2]
-
-### 5.6 Análisis de Escenarios
-
-#### Escenario Optimista (Precios -1σ)
-- **Equipamiento 1:** $XX,XXX.XX (36 meses)
-- **Equipamiento 2:** $XX,XXX.XX (36 meses)
-
-#### Escenario Base (Pronóstico Esperado)
-- **Equipamiento 1:** $XX,XXX.XX (36 meses)
-- **Equipamiento 2:** $XX,XXX.XX (36 meses)
-
-#### Escenario Pesimista (Precios +1σ)
-- **Equipamiento 1:** $XX,XXX.XX (36 meses)
-- **Equipamiento 2:** $XX,XXX.XX (36 meses)
-
-### 5.7 Visualizaciones Clave
+### 5. Visualizaciones 
 
 Los siguientes gráficos han sido generados y guardados en la carpeta `Resultados/`:
 
@@ -322,21 +195,13 @@ Los siguientes gráficos han sido generados y guardados en la carpeta `Resultado
    - Comparación lado a lado de los costos proyectados
    - Evolución diaria y promedios mensuales
 
-3. **analisis_escenarios.png** (si aplicable)
+3. **analisis_escenarios.png**
    - Visualización de escenarios optimista, base y pesimista
 
 ---
 
 ## 6. RECOMENDACIONES
 
-### 6.1 Recomendación Principal
-
-**OPCIÓN RECOMENDADA: [Equipamiento 1 / Equipamiento 2]**
-
-**Justificación:**
-1. **Costo:** Representa un ahorro de $X,XXX.XX (XX.X%) sobre 36 meses
-2. **Estabilidad:** Menor volatilidad proyectada (CV de XX.X% vs XX.X%)
-3. **Riesgo:** Menor exposición a fluctuaciones extremas de mercado
 
 ### 6.2 Estrategias de Mitigación de Riesgo
 
@@ -381,55 +246,13 @@ Los siguientes gráficos han sido generados y guardados en la carpeta `Resultado
 
 ## 7. MEJORAS FUTURAS
 
-### 7.1 Corto Plazo (3-6 meses)
-
-#### 1. Incorporación de Datos Externos
+#### Incorporación de Datos Externos
 - **Variables Macroeconómicas:** Inflación, tipo de cambio, tasas de interés
 - **Indicadores Sectoriales:** Índices de construcción, precios de commodities relacionados
 - **Impacto Esperado:** Mejora del 10-15% en precisión de pronósticos
 
-#### 2. Modelos Avanzados de Machine Learning
-- **LSTM (Long Short-Term Memory):** Redes neuronales para series temporales complejas
-- **Prophet:** Modelo de Facebook optimizado para estacionalidad y tendencias
-- **Ensemble Methods:** Combinación ponderada de múltiples modelos
-- **Impacto Esperado:** Reducción del MAPE en 3-5 puntos porcentuales
-
-#### 3. Análisis de Sentimiento de Mercado
-- **Fuentes:** Noticias, reportes de analistas, redes sociales
-- **Técnica:** NLP (Natural Language Processing) para detectar señales tempranas
-- **Impacto Esperado:** Anticipación de movimientos abruptos de mercado
-
-### 7.2 Mediano Plazo (6-12 meses)
-
-#### 1. Dashboard Interactivo en Tiempo Real
-- **Plataforma:** Power BI, Tableau o Streamlit (Python)
-- **Funcionalidades:**
-  - Visualización en vivo de precios
-  - Alertas automáticas
-  - Análisis what-if interactivo
-  - Reportes automáticos
-
-#### 2. Optimización de Compras con OR (Operations Research)
-- **Técnica:** Programación lineal/mixta
-- **Objetivo:** Determinar calendario óptimo de compras
-- **Restricciones:** Capacidad de almacenamiento, flujo de caja, lead times
-
-#### 3. Sistema de Recomendación Dinámico
-- **Funcionalidad:** Ajustar recomendaciones en tiempo real basándose en nuevos datos
-- **Trigger:** Actualización diaria/semanal de pronósticos
-- **Output:** Email o notificación con insights accionables
-
-### 7.3 Largo Plazo (12+ meses)
-
-#### 1. Integración con ERP y Sistemas de Compras
-- **Objetivo:** Automatización end-to-end del proceso de procurement
-- **Módulos:** Detección automática de oportunidades de compra, generación de órdenes
-
-#### 2. Modelos Causales (Econometría)
-- **Técnica:** VAR (Vector Autoregression), Granger Causality
-- **Objetivo:** Entender relaciones causales entre materias primas y factores externos
-- **Aplicación:** Estrategias de cobertura (hedging) más sofisticadas
-
+#### Reentrenamiento de modelo
+- **Impacto Esperado:** Mejora en el tiempo sobre las predicciones.
 
 ---
 
@@ -441,12 +264,8 @@ Los siguientes gráficos han sido generados y guardados en la carpeta `Resultado
    - Requirió esfuerzo significativo de normalización y limpieza
    - Riesgo de errores de parsing (mitigado mediante validaciones extensivas)
 
-2. **Disparidad Temporal:**
-   - Materia prima Z con datos hasta 2021 (más desactualizados)
-   - Podría afectar precisión del pronóstico para Equipamiento 2
-   - Recomendación: Actualizar data de Z lo antes posible
 
-3. **Horizonte de Pronóstico Largo:**
+2. **Horizonte de Pronóstico Largo:**
    - 36 meses es un horizonte ambicioso para series económicas
    - Confianza disminuye significativamente después de 12-18 meses
    - Mitigado mediante re-entrenamiento trimestral propuesto
@@ -464,19 +283,7 @@ Los siguientes gráficos han sido generados y guardados en la carpeta `Resultado
 3. **Necesidad de Comunicación Clara:**
    - Visualizaciones efectivas son tan importantes como los modelos técnicos
 
-### 8.2 Consideraciones Éticas y Responsables
 
-1. **Transparencia de Limitaciones:**
-   - Los modelos no son infalibles; es importante comunicar incertidumbre
-   - Usuarios deben entender que son estimaciones, no garantías
-
-2. **Sesgo de Datos Históricos:**
-   - Eventos únicos del pasado (ej. COVID-19) pueden distorsionar patrones
-   - Importante complementar modelos cuantitativos con juicio experto
-
-3. **Impacto en Decisiones:**
-   - Este análisis podría influir en decisiones de millones de dólares
-   - Responsabilidad de validar constantemente y ajustar cuando sea necesario
 
 ### 8.3 Reflexiones Personales
 
