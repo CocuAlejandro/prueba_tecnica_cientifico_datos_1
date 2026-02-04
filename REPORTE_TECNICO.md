@@ -36,7 +36,7 @@ Se requiere estimar los costos de dos tipos de equipamiento esencial para un pro
 ## 2. EXPLICACIÓN DEL CASO
 
 ### 2.1 Objetivo del Proyecto
-Determinar cuál equipamiento proporciona el mejor costo-beneficio para un proyecto de construcción de 36 meses, mediante el análisis predictivo de precios de materias primas.
+Estimar los costos de dos tipos de equipamiento esencial para un proyecto de construcción con duración de 36 meses. Estos equipamientos están compuestos por diferentes proporciones de tres materias primas (X, Y, Z), cuyos precios son variables en el tiempo.
 
 ### 2.2 Composición de Equipamientos
 
