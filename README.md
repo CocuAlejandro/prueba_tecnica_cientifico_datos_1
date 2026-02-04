@@ -6,7 +6,7 @@ Este proyecto realiza un análisis predictivo de costos para dos tipos de equipa
 
 ## Objetivo
 
-Determinar cuál equipamiento (Equipamiento 1 o 2) proporciona el mejor costo-beneficio durante 36 meses, basándose en pronósticos de precios de materias primas X, Y y Z.
+Estimar los costos de dos tipos de equipamiento esencial para un proyecto de construcción con duración de 36 meses. Estos equipamientos están compuestos por diferentes proporciones de tres materias primas (X, Y, Z), cuyos precios son variables en el tiempo.
 
 ## Estructura del Proyecto
 
